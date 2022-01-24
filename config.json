@@ -2,6 +2,6 @@
   "name": "webserver",
   "environment": "sviluppo",
   "version": "1.0.0",
-  "webApiBaseUrl": "http://192.168.94.97:8000/",
+  "webApiBaseUrl": "http://0.0.0.0:80/",
   "showLogin": false
 }
