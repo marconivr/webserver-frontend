@@ -16,6 +16,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Weather PWA">
   <link rel="apple-touch-icon" href="assets/icons/152.png">
+  <!--login-->
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="860290948276-pl4bie8lscs1vbj37gidnt063p2uahp9.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 
   <!-- inline spinner styles to be able to display spinner right away -->
   <style type="text/css">
@@ -115,6 +119,23 @@
       document.getElementById('iebrowser').innerHTML = "Questa applicazione non supporta Internet Explorer. \n Per favore, utilizza un altro browser";
     }
   </script>
-<script src="runtime-es2015.0811dcefd377500b5b1a.js" type="module"></script><script src="runtime-es5.0811dcefd377500b5b1a.js" nomodule defer></script><script src="polyfills-es5.c1a52c2070b99e8d20b4.js" nomodule defer></script><script src="polyfills-es2015.f6102e2108544fbc0b5d.js" type="module"></script><script src="scripts.e6d8a0baee4b35fb6689.js" defer></script><script src="main-es2015.5310809cbd6f9e22881b.js" type="module"></script><script src="main-es5.5310809cbd6f9e22881b.js" nomodule defer></script></body>
+  <script>
+    
+    function onSignIn(googleUser) {
+      // Useful data for your client-side scripts:
+      var profile = googleUser.getBasicProfile();
+      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+      console.log('Full Name: ' + profile.getName());
+      console.log('Given Name: ' + profile.getGivenName());
+      console.log('Family Name: ' + profile.getFamilyName());
+      console.log("Image URL: " + profile.getImageUrl());
+      console.log("Email: " + profile.getEmail());
+
+      // The ID token you need to pass to your backend:
+      var id_token = googleUser.getAuthResponse().id_token;
+      console.log("ID Token: " + id_token);
+    }
+  </script>
+<script src="runtime-es2015.0811dcefd377500b5b1a.js" type="module"></script><script src="runtime-es5.0811dcefd377500b5b1a.js" nomodule defer></script><script src="polyfills-es5.c1a52c2070b99e8d20b4.js" nomodule defer></script><script src="polyfills-es2015.f6102e2108544fbc0b5d.js" type="module"></script><script src="scripts.e6d8a0baee4b35fb6689.js" defer></script><script src="main-es2015.389f691bdac20fc1e5b7.js" type="module"></script><script src="main-es5.389f691bdac20fc1e5b7.js" nomodule defer></script></body>
 
 </html>
