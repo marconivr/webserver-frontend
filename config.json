@@ -1,7 +1,0 @@
-{
-  "name": "webserver",
-  "environment": "sviluppo",
-  "version": "1.0.0",
-  "webApiBaseUrl": "http://localhost:80/",
-  "showLogin": true
-}
